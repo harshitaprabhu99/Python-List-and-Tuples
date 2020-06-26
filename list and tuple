@@ -1,0 +1,44 @@
+l=list()
+
+initial_tuple_size=0
+
+t=tuple()
+
+new_list=list()
+
+n=int(input("enter size of list"))
+
+for i in range(n):
+
+  tn=int(input("enter size of tuple"))
+
+  if(tn>initial_tuple_size):
+
+	initial_tuple_size=tn
+
+  print("enter tuple elements")
+
+  for i in range(tn):
+
+	z=int(input())
+
+	t=t[0:]+(z,)
+
+  l.append(t)
+
+for i in range(initial_tuple_size):
+
+  k=1
+
+  for j in l:
+
+    if(len(j)>i):
+
+  	t=t[0:]+(j[i]**k,)
+
+  	k+=1
+
+  new_list.append(t)
+
+print(new_list)
+
